@@ -1,5 +1,11 @@
 # Projet 3 du parcours Développeur Web d'OpenClassrooms : Dynamiser une page web avec des animations CSS.
 
+Compétences évaluées : 
+
+- Mettre en œuvre des effets CSS graphiques avancés
+- Assurer la cohérence graphique d'un site web
+- Mettre en place une structure de navigation pour un site web
+
 # Scénario
 Vous venez d’être recruté chez Ohmyfood!, en tant que développeur junior. Félicitations !
 
