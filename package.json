@@ -1,0 +1,21 @@
+{
+  "name": "jeremymedana_3_26112020",
+  "version": "1.0.0",
+  "description": "Projet 3 - Développeur Web - OpenClassrooms",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css",
+    "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/prefixed/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JeremyMeed/JeremyMedana_3_26112020.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "browserslist": "last 4 versions",
+  "bugs": {
+    "url": "https://github.com/JeremyMeed/JeremyMedana_3_26112020/issues"
+  },
+  "homepage": "https://github.com/JeremyMeed/JeremyMedana_3_26112020#readme"
+}
