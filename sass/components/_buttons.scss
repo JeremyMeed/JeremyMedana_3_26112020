@@ -9,6 +9,7 @@
   font-size: 1rem;
   box-shadow: 0 2px 8px 2px #c4c4c4;
   &:hover {
+    cursor: pointer;
     box-shadow: 0 2px 8px 2px #959595;
     opacity: 90%;
   }

@@ -1,13 +1,24 @@
-.footer {
-  display: flex;
-  flex-direction: column;
+footer {
   padding: 25px;
   color: white;
-  background-color: #3d3d3d;
-  &__title {
+  background-color: #303030;
+  h3 {
     font-family: "Shrikhand", "sans-serif";
+    padding: 5px 0 20px 0;
   }
-  & ul {
+  ul {
     list-style-type: none;
+    li {
+      padding: 5px 0 5px 0;
+    }
+    .fa-utensils {
+      margin-right: 12px;
+    }
+    .fa-hands-helping {
+      margin-right: 6px;
+    }
+    .fas {
+      font-size: 13px;
+    }
   }
 }
