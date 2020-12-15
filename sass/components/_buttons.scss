@@ -1,4 +1,5 @@
-.btn-main {
+// Bouton principal
+.main__btn {
   border-radius: 30px;
   margin-top: 30px;
   margin-bottom: 30px;
@@ -7,10 +8,27 @@
   color: white;
   border-style: none;
   font-size: 1rem;
-  box-shadow: 0 2px 8px 2px #c4c4c4;
+  box-shadow: 0 2px 8px 2px $shadow;
+  cursor: pointer;
   &:hover {
-    cursor: pointer;
-    box-shadow: 0 2px 8px 2px #959595;
-    opacity: 90%;
+    box-shadow: 0 2px 8px 2px $shadow-hover;
+    opacity: 85%;
+  }
+}
+
+// Bouton Like
+.fa-heart {
+  font-size: 22px;
+  padding-right: 20px;
+}
+
+// Bouton Valider
+.menu__btn--check {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: $color-tertiary;
+  .fa-check-circle {
+    color: white;
   }
 }
