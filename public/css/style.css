@@ -161,7 +161,7 @@ a {
   color: inherit;
 }
 
-.btn-main {
+.main__btn {
   border-radius: 30px;
   margin-top: 30px;
   margin-bottom: 30px;
@@ -171,16 +171,37 @@ a {
   border-style: none;
   font-size: 1rem;
   box-shadow: 0 2px 8px 2px #c4c4c4;
-}
-.btn-main:hover {
   cursor: pointer;
+}
+.main__btn:hover {
   box-shadow: 0 2px 8px 2px #959595;
-  opacity: 90%;
+  opacity: 85%;
 }
 
-.header-index {
+.fa-heart {
+  font-size: 22px;
+  padding-right: 20px;
+}
+
+.menu__btn--check {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #99e2d0;
+}
+.menu__btn--check .fa-check-circle {
+  color: white;
+}
+
+header {
   text-align: center;
-  padding: 20px 0 10px;
+  padding: 20px 20px 15px;
+}
+header a {
+  float: left;
+  margin-top: 6px;
+  color: #3a3a3a;
+  font-size: 20px;
 }
 
 .presentation {
@@ -233,7 +254,7 @@ a {
   padding: 30px;
   margin: 15px 20px 15px 30px;
   border-radius: 20px;
-  box-shadow: 1px 2px 8px 2px #d9d9d9;
+  box-shadow: 1px 2px 8px 2px #c4c4c4;
   background-color: #f5f5f5;
   align-items: center;
 }
@@ -305,9 +326,58 @@ a {
   display: flex;
   justify-content: space-between;
 }
-.restaurants__figure figcaption div .fa-heart {
-  padding-right: 20px;
-  font-size: 22px;
+
+.menu {
+  background-color: #f5f5f5;
+  padding-bottom: 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.menu img {
+  object-fit: cover;
+  width: 100%;
+}
+.menu__title {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+  border-radius: 30px 30px 0 0;
+}
+.menu__title h2 {
+  font-family: "Shrikhand", "sans-serif";
+  font-size: 1.7rem;
+  padding-bottom: 20px;
+}
+.menu__description {
+  padding-bottom: 10px;
+}
+.menu__description h3 {
+  font-weight: 300;
+  font-size: 1rem;
+  padding: 20px 0;
+}
+.menu__description .menu__btn {
+  background-color: white;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 1px 2px 8px 2px #c4c4c4;
+  cursor: pointer;
+}
+.menu__description .menu__btn h4 {
+  margin-bottom: 7px;
+}
+.menu__description .menu__btn--price {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.menu__description .menu__btn--price p {
+  font-weight: 400;
 }
 
 footer {
