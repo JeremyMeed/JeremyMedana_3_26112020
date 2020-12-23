@@ -1,0 +1,28 @@
+.loading {
+  background: white;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: -5;
+  animation: loadingFade 3000ms linear 1;
+
+  &__box {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    height: auto;
+    background: white;
+  }
+  &__icon {
+    background: linear-gradient(to left, $color-secondary, $color-primary);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-size: 100px;
+    z-index: -1;
+    animation: loadingSpinner 3000ms linear 1;
+  }
+}

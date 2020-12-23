@@ -1,0 +1,11 @@
+// Check menu
+.menu__btn--icon {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  background: $color-tertiary;
+  .fa-check-circle {
+    color: white;
+    font-size: 20px;
+  }
+}
