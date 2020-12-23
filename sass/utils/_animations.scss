@@ -1,0 +1,61 @@
+// Fade du chargement page d'accueil
+
+@keyframes loadingFade {
+  0% {
+    opacity: 1;
+    z-index: 10;
+  }
+  90% {
+    opacity: 1;
+    z-index: 10;
+  }
+  95% {
+    opacity: 0;
+    z-index: 10;
+  }
+  100% {
+    opacity: 0;
+    z-index: -5;
+  }
+}
+
+// Rotation du chargement page d'accueil
+
+@keyframes loadingSpinner {
+  0% {
+    transform: rotate(0deg);
+    z-index: 15;
+  }
+  100% {
+    transform: rotate(1080deg);
+    z-index: -5;
+  }
+}
+
+// Remplissage du coeur
+
+@keyframes heartFill {
+  0% {
+    background: white;
+    -webkit-background-clip: text;
+  }
+
+  100% {
+    -webkit-text-stroke: 0px white;
+    background: linear-gradient(to top, $color-secondary, $color-primary);
+    -webkit-background-clip: text;
+  }
+}
+
+// Apparition des menus sur pages restos
+
+@keyframes fadeInMenus {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

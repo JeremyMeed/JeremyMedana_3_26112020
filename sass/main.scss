@@ -1,7 +1,11 @@
 @import "./utils/variables";
+@import "./utils/animations";
 @import "./base/base";
 @import "./base/typography";
+@import "./components/loading";
 @import "./components/buttons";
+@import "./components/like";
+@import "./components/check";
 @import "./layout/header";
 @import "./layout/presentation";
 @import "./layout/operation";
