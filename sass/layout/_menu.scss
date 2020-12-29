@@ -21,11 +21,12 @@
       }
     }
     &__description {
-      padding: 20px;
+      padding: 15px;
       h3 {
         font-weight: 300;
         font-size: 1rem;
         margin: 5px 0 15px;
+        padding-left: 5px;
         &::after {
           content: "";
           width: 40px;
@@ -36,30 +37,46 @@
         }
       }
       .menu__btn {
-        background-color: white;
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 15px;
-        padding: 15px 10px;
+        position: relative;
+        padding: 15px;
+        background: white;
         border-radius: 15px;
         box-shadow: 1px 2px 8px 2px $shadow;
+        margin-bottom: 15px;
         overflow: hidden;
         cursor: pointer;
-        &--text {
-          h4 {
-            margin-bottom: 7px;
-          }
-          p {
-            font-size: 15px;
-          }
+        &--name {
+          max-width: 260px;
+          margin-bottom: 10px;
+        }
+        &--info {
+          max-width: 260px;
+          font-size: 15px;
         }
         &--price {
-          display: flex;
-          flex-direction: column;
-          justify-content: flex-end;
-          p {
-            font-weight: 400;
-          }
+          position: absolute;
+          right: 20px;
+          bottom: 15px;
+          font-weight: 500;
+        }
+        &:hover .menu__btn--name,
+        &:hover .menu__btn--info {
+          transition: all 2s ease;
+          white-space: nowrap;
+          width: 210px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        &:hover .menu__btn--price {
+          transition: right 0.5s ease;
+          right: 75px;
+        }
+        &:hover .menu__btn--icon {
+          transition: right 0.5s ease;
+          right: 0;
+        }
+        &:hover i {
+          animation: checkSpinner 800ms ease;
         }
         animation: fadeInMenus ease-out;
         &:nth-of-type(1) {
