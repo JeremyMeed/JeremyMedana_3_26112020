@@ -47,6 +47,14 @@
     transform: translateY(0);
   }
 }
+@keyframes checkSpinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -275,8 +283,14 @@ a {
 .menu__btn--icon {
   display: flex;
   justify-content: center;
-  align-self: center;
+  align-items: center;
+  position: absolute;
+  right: -61px;
+  top: 0;
+  border-radius: 0 15px 15px 0;
   background: #99e2d0;
+  width: 60px;
+  height: 100%;
 }
 .menu__btn--icon .fa-check-circle {
   color: white;
@@ -442,12 +456,13 @@ header a {
   font-size: 1.7rem;
 }
 .page-restaurant .menu__description {
-  padding: 20px;
+  padding: 15px;
 }
 .page-restaurant .menu__description h3 {
   font-weight: 300;
   font-size: 1rem;
   margin: 5px 0 15px;
+  padding-left: 5px;
 }
 .page-restaurant .menu__description h3::after {
   content: "";
@@ -458,30 +473,47 @@ header a {
   margin-top: 5px;
 }
 .page-restaurant .menu__description .menu__btn {
-  background-color: white;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 15px;
-  padding: 15px 10px;
+  position: relative;
+  padding: 15px;
+  background: white;
   border-radius: 15px;
   box-shadow: 1px 2px 8px 2px #c4c4c4;
+  margin-bottom: 15px;
   overflow: hidden;
   cursor: pointer;
   animation: fadeInMenus ease-out;
 }
-.page-restaurant .menu__description .menu__btn--text h4 {
-  margin-bottom: 7px;
+.page-restaurant .menu__description .menu__btn--name {
+  max-width: 260px;
+  margin-bottom: 10px;
 }
-.page-restaurant .menu__description .menu__btn--text p {
+.page-restaurant .menu__description .menu__btn--info {
+  max-width: 260px;
   font-size: 15px;
 }
 .page-restaurant .menu__description .menu__btn--price {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  position: absolute;
+  right: 20px;
+  bottom: 15px;
+  font-weight: 500;
 }
-.page-restaurant .menu__description .menu__btn--price p {
-  font-weight: 400;
+.page-restaurant .menu__description .menu__btn:hover .menu__btn--name, .page-restaurant .menu__description .menu__btn:hover .menu__btn--info {
+  transition: all 2s ease;
+  white-space: nowrap;
+  width: 210px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.page-restaurant .menu__description .menu__btn:hover .menu__btn--price {
+  transition: right 0.5s ease;
+  right: 75px;
+}
+.page-restaurant .menu__description .menu__btn:hover .menu__btn--icon {
+  transition: right 0.5s ease;
+  right: 0;
+}
+.page-restaurant .menu__description .menu__btn:hover i {
+  animation: checkSpinner 800ms ease;
 }
 .page-restaurant .menu__description .menu__btn:nth-of-type(1) {
   animation-duration: 1s;
