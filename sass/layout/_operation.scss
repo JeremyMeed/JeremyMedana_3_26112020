@@ -12,12 +12,12 @@
       display: flex;
       flex-wrap: nowrap;
       justify-content: flex-start;
+      align-items: center;
       padding: 25px;
       margin: 15px 20px 15px 30px;
       border-radius: 20px;
       box-shadow: 1px 2px 8px 2px $shadow;
       background-color: $bg-lightGrey;
-      align-items: center;
       p {
         font-weight: 500;
         margin-left: 20px;
@@ -40,6 +40,14 @@
       color: grey;
       font-size: 1.3rem;
       margin-left: 20px;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .operation {
+    &__steps {
+      flex-flow: row wrap;
     }
   }
 }
