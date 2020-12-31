@@ -355,12 +355,12 @@ header a {
   display: flex;
   flex-wrap: nowrap;
   justify-content: flex-start;
+  align-items: center;
   padding: 25px;
   margin: 15px 20px 15px 30px;
   border-radius: 20px;
   box-shadow: 1px 2px 8px 2px #c4c4c4;
   background-color: #f5f5f5;
-  align-items: center;
 }
 .operation__steps li p {
   font-weight: 500;
@@ -385,6 +385,11 @@ header a {
   margin-left: 20px;
 }
 
+@media screen and (min-width: 768px) {
+  .operation__steps {
+    flex-flow: row wrap;
+  }
+}
 .restaurants {
   background-color: #f5f5f5;
   padding: 20px 20px 40px 20px;
@@ -559,6 +564,12 @@ footer ul .fa-hands-helping {
 }
 footer ul .fas {
   font-size: 13px;
+}
+
+@media screen and (min-width: 768px) {
+  footer {
+    text-align: center;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
