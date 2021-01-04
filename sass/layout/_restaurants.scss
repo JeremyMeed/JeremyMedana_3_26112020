@@ -6,22 +6,22 @@
   }
   &__cards {
     margin-bottom: 20px;
-  }
-  &__figure {
+    position: relative;
     display: flex;
     flex-direction: column;
     box-shadow: 1px 2px 8px 2px #d9d9d9;
     border-radius: 15px;
-    .new {
+    &--new {
+      position: absolute;
       font-size: 0.9rem;
       font-weight: 500;
       border-radius: 2px;
+      right: 15px;
       color: #1c7660;
       background-color: $color-tertiary;
       padding: 7px 10px 5px;
       margin-top: 15px;
-      position: absolute;
-      right: 35px;
+      z-index: 1;
     }
     img {
       object-fit: cover;
@@ -29,8 +29,7 @@
       height: 175px;
       border-radius: 15px 15px 0 0;
     }
-
-    figcaption {
+    &--info {
       background-color: white;
       border-radius: 0 0 15px 15px;
       padding: 20px 0 15px 15px;
@@ -41,6 +40,42 @@
         display: flex;
         justify-content: space-between;
       }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .restaurants {
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    &__cards {
+      width: 48%;
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .restaurants {
+    h2 {
+      text-align: center;
+    }
+    &__list {
+      justify-content: center;
+    }
+    &__cards {
+      width: 35%;
+      margin: 0 25px 30px 25px;
+    }
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  .restaurants {
+    &__cards {
+      width: 20%;
     }
   }
 }

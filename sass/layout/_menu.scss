@@ -6,6 +6,7 @@
   img {
     object-fit: cover;
     width: 100%;
+    height: 270px;
   }
   .menu {
     background-color: $bg-lightGrey;
@@ -46,11 +47,11 @@
         overflow: hidden;
         cursor: pointer;
         &--name {
-          max-width: 260px;
+          max-width: 82%;
           margin-bottom: 10px;
         }
         &--info {
-          max-width: 260px;
+          max-width: 82%;
           font-size: 15px;
         }
         &--price {
@@ -63,7 +64,7 @@
         &:hover .menu__btn--info {
           transition: all 2s ease;
           white-space: nowrap;
-          width: 210px;
+          width: 66%;
           overflow: hidden;
           text-overflow: ellipsis;
         }
@@ -99,6 +100,44 @@
       .btn-order {
         padding-left: 40px;
         padding-right: 40px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .menu {
+    padding: 0 25% 0 25%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .page-restaurant {
+    .menu {
+      padding: 0;
+      &__title {
+        justify-content: center;
+        h2 {
+          margin-right: 40px;
+        }
+      }
+      &__dishes {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 20px;
+      }
+      &__btn {
+        width: 335px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  .page-restaurant {
+    .menu {
+      &__btn {
+        width: 595px;
       }
     }
   }
