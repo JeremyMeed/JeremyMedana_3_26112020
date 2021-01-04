@@ -522,9 +522,10 @@ header a {
 }
 .page-restaurant .menu__description .menu__btn--name {
   max-width: 82%;
-  margin-bottom: 10px;
+  padding-bottom: 5px;
 }
 .page-restaurant .menu__description .menu__btn--info {
+  padding-top: 5px;
   max-width: 82%;
   font-size: 15px;
 }
