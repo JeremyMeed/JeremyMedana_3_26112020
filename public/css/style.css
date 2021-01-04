@@ -287,7 +287,6 @@ a {
   position: absolute;
   right: -61px;
   top: 0;
-  border-radius: 0 15px 15px 0;
   background: #99e2d0;
   width: 60px;
   height: 100%;
@@ -390,6 +389,11 @@ header a {
     flex-flow: row wrap;
   }
 }
+@media screen and (min-width: 1440px) {
+  .operation h2 {
+    text-align: center;
+  }
+}
 .restaurants {
   background-color: #f5f5f5;
   padding: 20px 20px 40px 20px;
@@ -399,43 +403,70 @@ header a {
 }
 .restaurants__cards {
   margin-bottom: 20px;
-}
-.restaurants__figure {
+  position: relative;
   display: flex;
   flex-direction: column;
   box-shadow: 1px 2px 8px 2px #d9d9d9;
   border-radius: 15px;
 }
-.restaurants__figure .new {
+.restaurants__cards--new {
+  position: absolute;
   font-size: 0.9rem;
   font-weight: 500;
   border-radius: 2px;
+  right: 15px;
   color: #1c7660;
   background-color: #99e2d0;
   padding: 7px 10px 5px;
   margin-top: 15px;
-  position: absolute;
-  right: 35px;
+  z-index: 1;
 }
-.restaurants__figure img {
+.restaurants__cards img {
   object-fit: cover;
   width: 100%;
   height: 175px;
   border-radius: 15px 15px 0 0;
 }
-.restaurants__figure figcaption {
+.restaurants__cards--info {
   background-color: white;
   border-radius: 0 0 15px 15px;
   padding: 20px 0 15px 15px;
 }
-.restaurants__figure figcaption h3 {
+.restaurants__cards--info h3 {
   margin-bottom: 10px;
 }
-.restaurants__figure figcaption div {
+.restaurants__cards--info div {
   display: flex;
   justify-content: space-between;
 }
 
+@media screen and (min-width: 768px) {
+  .restaurants__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .restaurants__cards {
+    width: 48%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .restaurants h2 {
+    text-align: center;
+  }
+  .restaurants__list {
+    justify-content: center;
+  }
+  .restaurants__cards {
+    width: 35%;
+    margin: 0 25px 30px 25px;
+  }
+}
+@media screen and (min-width: 2560px) {
+  .restaurants__cards {
+    width: 20%;
+  }
+}
 .page-restaurant {
   width: auto;
   padding-bottom: 30px;
@@ -445,6 +476,7 @@ header a {
 .page-restaurant img {
   object-fit: cover;
   width: 100%;
+  height: 270px;
 }
 .page-restaurant .menu {
   background-color: #f5f5f5;
@@ -489,11 +521,11 @@ header a {
   animation: fadeInMenus ease-out;
 }
 .page-restaurant .menu__description .menu__btn--name {
-  max-width: 260px;
+  max-width: 82%;
   margin-bottom: 10px;
 }
 .page-restaurant .menu__description .menu__btn--info {
-  max-width: 260px;
+  max-width: 82%;
   font-size: 15px;
 }
 .page-restaurant .menu__description .menu__btn--price {
@@ -505,7 +537,7 @@ header a {
 .page-restaurant .menu__description .menu__btn:hover .menu__btn--name, .page-restaurant .menu__description .menu__btn:hover .menu__btn--info {
   transition: all 2s ease;
   white-space: nowrap;
-  width: 210px;
+  width: 66%;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -541,6 +573,35 @@ header a {
   padding-right: 40px;
 }
 
+@media screen and (min-width: 768px) {
+  .menu {
+    padding: 0 25% 0 25%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .page-restaurant .menu {
+    padding: 0;
+  }
+  .page-restaurant .menu__title {
+    justify-content: center;
+  }
+  .page-restaurant .menu__title h2 {
+    margin-right: 40px;
+  }
+  .page-restaurant .menu__dishes {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+  .page-restaurant .menu__btn {
+    width: 335px;
+  }
+}
+@media screen and (min-width: 2560px) {
+  .page-restaurant .menu__btn {
+    width: 595px;
+  }
+}
 footer {
   padding: 25px;
   color: white;
