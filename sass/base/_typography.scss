@@ -1,0 +1,32 @@
+body {
+  font-family: $text-font;
+}
+
+h1 {
+  font-family: $logo-font;
+  font-size: $logo-size; //32px
+}
+
+h2 {
+  font-size: $h2-size; //24px
+  font-weight: $bold-weight;
+}
+
+h3 {
+  font-size: $h3-size; //19px
+  font-weight: $bold-weight;
+}
+
+h4 {
+  font-size: $h4-size; //18px
+  font-weight: $bold-weight;
+}
+
+p {
+  font-weight: 100;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

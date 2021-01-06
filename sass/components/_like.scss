@@ -1,0 +1,40 @@
+// Like
+.far.fa-heart {
+  cursor: pointer;
+  font-size: $h2-size;
+  position: absolute;
+  z-index: 3;
+  &:hover {
+    transition: color 0.5s ease;
+    color: transparent;
+  }
+  &:hover + .box-hidden {
+    bottom: 23px;
+  }
+}
+
+.box-hidden {
+  position: absolute;
+  width: 25px;
+  height: 23px;
+  right: 0px;
+  bottom: 0px;
+  background: white;
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.fas.fa-heart {
+  font-size: $h2-size;
+  background: linear-gradient(to top, $color-secondary, $color-primary);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.menu__heart {
+  position: relative;
+  margin-right: 10px;
+  .box-hidden {
+    background-color: $bg-lightGrey;
+  }
+}

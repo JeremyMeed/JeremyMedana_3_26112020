@@ -1,0 +1,24 @@
+footer {
+  padding: 25px;
+  color: white;
+  background-color: $bg-footer;
+  @include medium-screen {
+    text-align: center;
+  }
+  h3 {
+    font-family: $logo-font;
+    padding: 5px 0 20px 0;
+  }
+  ul {
+    list-style-type: none;
+    li {
+      padding: 5px 0 5px 0;
+    }
+    .fa-utensils {
+      margin-right: 12px;
+    }
+    .fa-hands-helping {
+      margin-right: 5px;
+    }
+  }
+}
