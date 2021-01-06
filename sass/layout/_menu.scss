@@ -1,8 +1,7 @@
 .page-restaurant {
   width: auto;
   padding-bottom: 30px;
-  display: flex;
-  flex-direction: column;
+  @include main-flex(column, center, stretch);
   img {
     object-fit: cover;
     width: 100%;
@@ -12,20 +11,37 @@
     background-color: $bg-lightGrey;
     margin-top: -45px;
     border-radius: 40px 40px 0 0;
+    @include medium-screen {
+      padding: 0 25% 0 25%;
+    }
+    @include large-screen {
+      padding: 0;
+    }
     &__title {
-      display: flex;
-      justify-content: space-between;
+      @include main-flex(row, space-between, center);
       padding: 30px 10px 20px 20px;
+      @include large-screen {
+        justify-content: center;
+      }
       h2 {
-        font-family: "Shrikhand", "sans-serif";
-        font-size: 1.7rem;
+        font-family: $logo-font;
+        font-size: $h2-size;
+        @include large-screen {
+          margin-right: 40px;
+        }
+      }
+    }
+    &__dishes {
+      @include large-screen {
+        @include main-flex(row, space-between, center);
+        padding: 0 20px;
       }
     }
     &__description {
       padding: 15px;
       h3 {
         font-weight: 300;
-        font-size: 1rem;
+        font-size: $normal-size;
         margin: 5px 0 15px;
         padding-left: 5px;
         &::after {
@@ -37,109 +53,10 @@
           margin-top: 5px;
         }
       }
-      .menu__btn {
-        position: relative;
-        padding: 15px;
-        background: white;
-        border-radius: 15px;
-        box-shadow: 1px 2px 8px 2px $shadow;
-        margin-bottom: 15px;
-        overflow: hidden;
-        cursor: pointer;
-        &--name {
-          max-width: 82%;
-          padding-bottom: 5px;
-        }
-        &--info {
-          padding-top: 5px;
-          max-width: 82%;
-          font-size: 15px;
-        }
-        &--price {
-          position: absolute;
-          right: 20px;
-          bottom: 15px;
-          font-weight: 500;
-        }
-        &:hover .menu__btn--name,
-        &:hover .menu__btn--info {
-          transition: all 2s ease;
-          white-space: nowrap;
-          width: 66%;
-          overflow: hidden;
-          text-overflow: ellipsis;
-        }
-        &:hover .menu__btn--price {
-          transition: right 0.5s ease;
-          right: 75px;
-        }
-        &:hover .menu__btn--icon {
-          transition: right 0.5s ease;
-          right: 0;
-        }
-        &:hover i {
-          animation: checkSpinner 800ms ease;
-        }
-        animation: fadeInMenus ease-out;
-        &:nth-of-type(1) {
-          animation-duration: 1s;
-        }
-        &:nth-of-type(2) {
-          animation-duration: 1.5s;
-        }
-        &:nth-of-type(3) {
-          animation-duration: 2s;
-        }
-        &:nth-of-type(4) {
-          animation-duration: 2.5s;
-        }
-      }
     }
     &__order {
       text-align: center;
       padding: 0;
-      .btn-order {
-        padding-left: 40px;
-        padding-right: 40px;
-      }
-    }
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .menu {
-    padding: 0 25% 0 25%;
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  .page-restaurant {
-    .menu {
-      padding: 0;
-      &__title {
-        justify-content: center;
-        h2 {
-          margin-right: 40px;
-        }
-      }
-      &__dishes {
-        display: flex;
-        justify-content: space-between;
-        padding: 0 20px;
-      }
-      &__btn {
-        width: 335px;
-      }
-    }
-  }
-}
-
-@media screen and (min-width: 2560px) {
-  .page-restaurant {
-    .menu {
-      &__btn {
-        width: 595px;
-      }
     }
   }
 }

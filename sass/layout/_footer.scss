@@ -1,9 +1,12 @@
 footer {
   padding: 25px;
   color: white;
-  background-color: #303030;
+  background-color: $bg-footer;
+  @include medium-screen {
+    text-align: center;
+  }
   h3 {
-    font-family: "Shrikhand", "sans-serif";
+    font-family: $logo-font;
     padding: 5px 0 20px 0;
   }
   ul {
@@ -15,16 +18,7 @@ footer {
       margin-right: 12px;
     }
     .fa-hands-helping {
-      margin-right: 6px;
+      margin-right: 5px;
     }
-    .fas {
-      font-size: 13px;
-    }
-  }
-}
-
-@media screen and (min-width: 768px) {
-  footer {
-    text-align: center;
   }
 }
