@@ -1,7 +1,32 @@
+// Breakpoints
+$breakpoints: (
+  medium: 768px,
+  large: 1440px,
+  x-large: 2560px,
+);
+
+// Colors
 $color-primary: #9356dc;
 $color-secondary: #ff79da;
 $color-tertiary: #99e2d0;
 $bg-grey: #e5e5e5;
 $bg-lightGrey: #f5f5f5;
+$bg-footer: #303030;
+$color-new: #1c7660;
+
+// Shadows
 $shadow: #c4c4c4;
 $shadow-hover: #959595;
+
+// Fonts
+$logo-font: "Shrikhand", "sans-serif";
+$text-font: "Roboto", "sans-serif";
+$bold-weight: 500;
+$normal-size: 1rem;
+$logo-size: 2rem;
+$h2-size: 1.5rem;
+$h3-size: 1.2rem;
+$h4-size: 1.1rem;
+
+// Transitions
+$price-trans-right: right 0.5s ease;

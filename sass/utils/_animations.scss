@@ -1,5 +1,4 @@
 // Fade du chargement page d'accueil
-
 @keyframes loadingFade {
   0% {
     opacity: 1;
@@ -20,7 +19,6 @@
 }
 
 // Rotation du chargement page d'accueil
-
 @keyframes loadingSpinner {
   0% {
     transform: rotate(0deg);
@@ -32,23 +30,7 @@
   }
 }
 
-// Remplissage du coeur
-
-@keyframes heartFill {
-  0% {
-    background: white;
-    -webkit-background-clip: text;
-  }
-
-  100% {
-    -webkit-text-stroke: 0px white;
-    background: linear-gradient(to top, $color-secondary, $color-primary);
-    -webkit-background-clip: text;
-  }
-}
-
 // Apparition des menus sur pages restos
-
 @keyframes fadeInMenus {
   0% {
     opacity: 0;
@@ -61,7 +43,6 @@
 }
 
 // Animation check plat
-
 @keyframes checkSpinner {
   from {
     transform: rotate(0deg);
