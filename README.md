@@ -26,3 +26,5 @@ De retour à votre bureau, vous trouvez un post-it de Fanny.
 Vous trouvez les maquettes du site dans votre boîte mail, envoyées par Fanny.
 
 Vous avez désormais tous les éléments pour construire ce site mobile. Vous vous lancez dans cette nouvelle aventure !
+
+Accès au site : https://jeremymeed.github.io/JeremyMedana_3_26112020/
