@@ -6,6 +6,8 @@ Compétences évaluées :
 - Assurer la cohérence graphique d'un site web
 - Mettre en place une structure de navigation pour un site web
 
+Projet validé ✅
+
 # Scénario
 Vous venez d’être recruté chez Ohmyfood!, en tant que développeur junior. Félicitations !
 
